@@ -1,12 +1,28 @@
 package tt;
 
-public class TTConnector implements ITTConnector {
+public class TTConnector implements ITTConnector, ITestTT {
 	
 	final static String TIME_TABLE_ONLINE = "Time Table Online";
 	
 	@Override
-	public String testFuncion() {
-		return TIME_TABLE_ONLINE;
+	public TTData getTT(String ttId) {
+		return getTT_TEST(ttId); //test
 	}
+
+	@Override
+	public Boolean saveTT(TTData tt) {
+		return saveTT_TEST(tt) ; //test
+
+	}
+	private Boolean saveTT_TEST(TTData tt) {
+		return ITestTT.TEST_TTDATA.equals(tt);
+	}
+
+	private TTData getTT_TEST(String ttId) {
+		if(ITestTT.TEST_TTID.equals(ttId))
+			return ITestTT.TEST_TTDATA;
+		return null;
+	}
+
 
 }
