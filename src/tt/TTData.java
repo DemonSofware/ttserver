@@ -8,7 +8,7 @@ public class TTData implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	private String ttId = null;
+	private Long ttId = null;
 	private String ttStyle = null;
 	private String ttEmail = null;
 	private String ttPassword = null;
@@ -20,12 +20,12 @@ public class TTData implements Serializable {
 	private List<Integer> workeDays = null;
 	// 0 - non selected slots, 1 - one client selects one slot, n - n clients select one slot
 	private Integer countClientsSelectedOneSlot = null;
-	private HashMap<String, TTEvent> ttEvents = null;
+	private HashMap<String, TTEvent> ttEvents = null;  // почему хеш мап?
 
 	public TTData() {}
 
 	public TTData(
-			String ttId, 
+			Long ttId, 
 			String ttStyle, 
 			String ttEmail,
 			String ttPassword, 
@@ -53,11 +53,11 @@ public class TTData implements Serializable {
 		this.ttEvents = ttEvents;
 	}
 
-	public String getTtId() {
+	public Long getTtId() {
 		return ttId;
 	}
 
-	public void setTtId(String ttId) {
+	public void setTtId(Long ttId) {
 		this.ttId = ttId;
 	}
 

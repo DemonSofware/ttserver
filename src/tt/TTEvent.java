@@ -7,7 +7,7 @@ public class TTEvent implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private String eId = null;
+	private Long eId = null;     
 	private Date eStartDate = null;
 	private Integer eSize = null; //in minutes
 	private String eTag = null;
@@ -16,7 +16,7 @@ public class TTEvent implements Serializable {
 	public TTEvent() {}
 
 	public TTEvent(
-			String eId, 
+			Long eId, 
 			Date eStartDate, 
 			Integer eSize, 
 			String eTag,
@@ -30,11 +30,11 @@ public class TTEvent implements Serializable {
 		this.isEventInfoAvailableForClient = isEventInfoAvailableForClient;
 	}
 
-	public String geteId() {
+	public Long geteId() {
 		return eId;
 	}
 
-	public void seteId(String eId) {
+	public void seteId(Long eId) {
 		this.eId = eId;
 	}
 
