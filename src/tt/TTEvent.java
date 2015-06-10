@@ -7,11 +7,11 @@ public class TTEvent implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private Long eId = null;     
-	private Date eStartDate = null;
-	private Integer eSize = null; //in minutes
-	private String eTag = null;
-	private Boolean isEventInfoAvailableForClient = null;
+	protected Long eId = null;     
+	protected Date eStartDate = null;
+	protected Integer eSize = null; //in minutes
+	protected String eTag = null;
+	protected Boolean isEventInfoAvailableForClient = null;
 	
 	public TTEvent() {}
 
