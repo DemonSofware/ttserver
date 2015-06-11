@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class TTEvent implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 2L;
 
 	protected Long eId = null;     
 	protected Date eStartDate = null;
